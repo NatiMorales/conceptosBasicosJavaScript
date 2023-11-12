@@ -49,3 +49,12 @@ for(let i=0; i<juegos.length; i++){
     document.write(`<li>${juegos[i]}</li>`);
 }
 document.write(`</ul>`);
+
+//modificamos los elementos de un array
+juegos[5] = "Stardew valley";
+document.write(`<h2>Lista de jugos, modificamos un elemento del array ${juegos.length}</h2>`);
+document.write(`<ul>`);
+for(let i=0; i<juegos.length; i++){
+    document.write(`<li>${juegos[i]}</li>`);
+}
+document.write(`</ul>`);
