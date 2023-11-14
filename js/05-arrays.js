@@ -12,6 +12,13 @@ function mostrarJuegos(titulo){
     document.write(`</ul>`);
 }
 
+const mostrarArray = (arreglo, titulo) => {
+    document.write(`<h2>${titulo}</h2>`);
+    document.write(`<ul>`);
+    arreglo.map((item => document.write(`<li>${item}</li>`)))
+    document.write(`</ul>`);
+}
+
 //cantidad de elementos en el array
 console.log(juegos.length);
 
@@ -68,3 +75,4 @@ console.log(juegos[8].includes("kombat"));
 //const juegosMKT = juegos.filter((juego) => juego === "Mortal Kombat 4");
 const juegosMKT = juegos.filter((juego) => juego.includes("Kombat"));
 console.log(juegosMKT);
+mostrarArray(juegosMKT,"Familia de juegos de MKT");
