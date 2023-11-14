@@ -57,3 +57,14 @@ mostrarJuegos(`Lista de jugos -1 un elemento del array ${juegos.length}`);
 
 //juegos[3] = ["p1", "p2", [35,36,37]];
 
+juegos.push("Mortal Kombat 1", "Mortal Kombat 2", "Mortal Kombat 3");
+mostrarJuegos("Agregamos nuevos jueguitos");
+
+console.log(juegos[8]);
+console.log(juegos[8].includes("Kombat")); //devuelve true o false
+console.log(juegos[8].includes("kombat"));
+
+//const juegosMKT = juegos.filter((juego) => condicion logica)
+//const juegosMKT = juegos.filter((juego) => juego === "Mortal Kombat 4");
+const juegosMKT = juegos.filter((juego) => juego.includes("Kombat"));
+console.log(juegosMKT);
