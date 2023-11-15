@@ -1,12 +1,13 @@
 class VideoJuego{
+    #etiquetas; //propiedad privada
     constructor(tituloParam,generoParam,precioParam,etiquetasParam,anioLanzamientoParam,desarrolladorParam){
         //declaramos la propiedad que tendra un videojuego
         this._titulo = tituloParam;
         this._precio = precioParam;
-        this._genero = generoParam;
-        this._etiquetas= etiquetasParam;
-        this._anioLanzamiento = anioLanzamientoParam;
-        this._desarrollador = desarrolladorParam;
+        this.genero = generoParam;
+        this.#etiquetas= etiquetasParam;
+        this.anioLanzamiento = anioLanzamientoParam;
+        this.desarrollador = desarrolladorParam;
         //propiedad por defecto
         this.pueblicado = false;
     }
@@ -29,10 +30,18 @@ class VideoJuego{
     mostrarDatos(){
         document.write(`<ul>
         <li>Titulo: ${this.titulo}</li>
-        <li>Precio: ${this.precio}</li>
+        <li>Precio: ${this.precio}USD</li>
         <li>Genero: ${this.genero}</li>
         <li>Desarrollador: ${this.desarrollador}</li>
         </ul>`)
-        
     }
 }
+
+//crear o instanciar un objeto
+const minecraft = new VideoJuego("Minecraft","sandbox",30,["cubitos","granja","mundo abierto","creeper"],2008,"Mojang");
+
+minecraft.mostrarDatos();
+
+document.write(`<p>Titulo del juego: ${minecraft.titulo}, 
+precio: $${minecraft.precio} USD</p>`);
+document.write(`<p>Etiquetas: ${minecraft.etiquetas}</p>`)
