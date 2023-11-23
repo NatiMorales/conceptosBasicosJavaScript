@@ -89,6 +89,7 @@ minecraft.mostrarDatos();
 
 document.write(`<p>Titulo del juego: ${minecraft.titulo}, 
 precio: $${minecraft.precio} USD</p>`);
+//la siguiente propiedad no se muestra porque es una propiedad privada
 document.write(`<p>Etiquetas: ${minecraft.etiquetas}</p>`);
 
 const rust = new JuegoDeSupervivencia("Rust", "supervivencia", 30, ["multijugador","realista","pvp","pve"], 2016, "Algun desarrollador", "Personaje principal", "El resto");
